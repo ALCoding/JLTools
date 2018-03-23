@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
-  s.name         = "URTools_Swift"
-  s.summary      = "URTools in Swift"
+  s.name         = "JLTools_Swift"
+  s.summary      = "JLTools in Swift"
   s.version      = "1.1.3"
-  s.homepage     = "http://192.168.1.253:3000/iOS/Tools"
+  s.homepage     = "https://github.com/ALCoding/JLTools"
   s.license      = "MIT"
-  s.authors      = { 'urun' => 'urundata@gmail.com'}
-  s.source       = { :git => "http://192.168.1.253:3000/iOS/Tools.git", :tag => s.version }
+  s.authors      = { 'Jalen' => 'alvdev@126.com'}
+  s.source       = { :git => "https://github.com/ALCoding/JLTools.git", :tag => s.version }
   s.source_files = 'Swift/Tools/Helper/**/*.swift'
   s.requires_arc = true
 
