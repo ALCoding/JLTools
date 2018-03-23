@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
 
   s.preserve_paths  = 'Swift/CommonCrypto/**/*'
   s.pod_target_xcconfig = {
-    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'         => '$(PODS_ROOT)/URTools_Swift/Swift/CommonCrypto/iphoneos',
-    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'  => '$(PODS_ROOT)/URTools_Swift/Swift/CommonCrypto/iphonesimulator',
+    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'         => '$(PODS_ROOT)/JLTools_Swift/Swift/CommonCrypto/iphoneos',
+    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'  => '$(PODS_ROOT)/JLTools_Swift/Swift/CommonCrypto/iphonesimulator',
     'SWIFT_VERSION' => '4.0'
   }
 end
