@@ -10,27 +10,27 @@ import Foundation
 
 public protocol NamespaceWrappable {
     associatedtype WrapperType
-    var urt: WrapperType { get set }
-    static var urt: WrapperType.Type { get set }
+    var jlt: WrapperType { get set }
+    static var jlt: WrapperType.Type { get set }
 }
 
 public extension NamespaceWrappable {
-    var urt: NamespaceWrapper<Self> {
+    var jlt: NamespaceWrapper<Self> {
         get {
             return NamespaceWrapper(value: self)
         }
         
         set {
-            urt = newValue
+            jlt = newValue
         }
     }
-    static var urt: NamespaceWrapper<Self>.Type {
+    static var jlt: NamespaceWrapper<Self>.Type {
         get {
             return NamespaceWrapper.self
         }
         
         set {
-            self.urt = newValue
+            self.jlt = newValue
         }
     }
 }

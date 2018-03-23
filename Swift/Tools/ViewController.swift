@@ -44,15 +44,15 @@ class ViewController: UIViewController {
     }
     
     @objc func test() {
-        colorView.backgroundColor = UIColor.urt.randomColor
+        colorView.backgroundColor = UIColor.jlt.randomColor
     }
     
     @objc func action(btn: UIButton) {
-        colorView.backgroundColor = UIColor.urt.randomColorDeep
+        colorView.backgroundColor = UIColor.jlt.randomColorDeep
     }
     
     @objc func action2(btn: UIButton) {
-        colorView.backgroundColor = UIColor.urt.randomColorLight
+        colorView.backgroundColor = UIColor.jlt.randomColorLight
     }
     
     

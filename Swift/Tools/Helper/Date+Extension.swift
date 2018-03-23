@@ -71,8 +71,8 @@ extension TypeWrapperProtocol where WrappedType == Date {
         let nowDate = Self.getNowLocalDate()
         let nowDay = dateFormatter.string(from: nowDate)
         let lastDay = dateFormatter.string(from: beforeDate)
-        let nowDayInt = nowDay.urt.toIntValue()!
-        let lastDayInt = lastDay.urt.toIntValue()!
+        let nowDayInt = nowDay.jlt.toIntValue()!
+        let lastDayInt = lastDay.jlt.toIntValue()!
         
         // 小于1天
         if distanceTimeInterval < 24 * 60 * 60 && nowDayInt == lastDayInt { return "\(timeString)" }
@@ -88,7 +88,7 @@ extension TypeWrapperProtocol where WrappedType == Date {
         
         dateFormatter.dateFormat = "yyyy"
         let yearString = dateFormatter.string(from: beforeDate)
-        let nowDateYearString = nowDate.urt.toString(style: DateStyle.defaultStyle.rawValue).urt[0..<4]
+        let nowDateYearString = nowDate.jlt.toString(style: DateStyle.defaultStyle.rawValue).jlt[0..<4]
         // 本年内
         if yearString == nowDateYearString {
             dateFormatter.dateFormat = "MM-dd"

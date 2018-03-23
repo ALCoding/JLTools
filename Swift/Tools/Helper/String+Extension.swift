@@ -86,8 +86,8 @@ extension TypeWrapperProtocol where WrappedType == String {
     public func firstLetterUpper() -> String {
         if !wrappedValue.isEmpty {
             let upperStr = wrappedValue.uppercased()
-            if upperStr.urt[0..<1] >= "A" && upperStr.urt[0..<1] <= "Z" {
-                return upperStr.urt[0..<1]
+            if upperStr.jlt[0..<1] >= "A" && upperStr.jlt[0..<1] <= "Z" {
+                return upperStr.jlt[0..<1]
             } else {
                 return "#"
             }
