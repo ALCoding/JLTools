@@ -12,13 +12,13 @@
 **Objective-C**
 
 ```
-pod 'URTools_OC'
+pod 'JLTools_OC'
 ```
 
 **Swift**
 
 ```
-pod 'URTools_Swift'
+pod 'JLTools_Swift'
 ```
 
 
@@ -36,7 +36,7 @@ pod 'URTools_Swift'
     2. 扩展方法调用需要通过`.urt`进行调用。如：
 
         ```Swift
-        view.backgroundColor = UIColor.urt.randomColor
+        view.backgroundColor = UIColor.jlt.randomColor
         ```    
     
 2. 使用配置  
