@@ -21,46 +21,7 @@ pod 'URTools_OC'
 pod 'URTools_Swift'
 ```
 
-**本地配置**
 
-- 使用下面的命令，将私有repo拉到本地。
-
-```  
-pod repo add [在本地你喜欢叫什么都行] http://192.168.1.253:3000/iOS/SpecRepo.git 
-```
-
-- 在工程的podfile文件里面添加如下配置（附例），然后在1网段使用`pod install`安装私有工具库即可使用。
-
-```
-source 'http://192.168.1.253:3000/iOS/SpecRepo.git' // 查找私有
-source 'https://github.com/CocoaPods/Specs.git' // 查找官方库
-```
-
-**注意:** 如果某些库更新了，也要更新本地的repo仓库才能使用。
-
-```
-pod repo update [你本地的名字]
-```
-
-Podfile文件`source`配置附例：
-
-```
-inhibit_all_warnings!
-platform :ios, '8.0'
-use_frameworks!
-
-source 'http://192.168.1.253:3000/iOS/SpecRepo.git'
-source 'https://github.com/CocoaPods/Specs.git'
-
-target 'CommonNetComment' do
-    
-    pod 'SnapKit'
-    pod 'Alamofire'
-    pod 'URTools_Swift'
-
-end
-
-```
 
 #### 2.使用说明
 
@@ -82,17 +43,12 @@ end
 `UIDevice+UUID.swift`工具包含Keychain存储功能并支持**同组应用（同一证书打包）**共享钥匙串信息，在使用时需对工程进行配置：
 
     1. Targets -> Capabilities -> Keychain Sharing, 打开`Keychain Sharing`开关。
-    2. `Keychain Groups`内容改为 `com.urun.Family`。
+    2. `Keychain Groups`内容改为统一标识，例如： `com.company.Family`。
 
 ## Next
 1. 若缺少特定功能，建议在此基础上`进行封装`或`添加Extension`，尽量避免直接修改原有逻辑。
-2. 若缺少所需共通性功能，可在Gogs提`issue(工单)`并指派人员进行开发。
+2. 若缺少所需共通性功能，可提`issue`。
 3. 若扩展出现Bug或扩展设计存在问题，请立即指出。
-4. 工具集后续**开发规范**：  
-	1. 文件命名一般采用`类名+Extension`的方式，例`UIView+Extension.swift`；  
-	2. 特定功能的扩展可视情况命名，需见名知意，例`UIImageView+CornerRadius.m` `String+Encryption.swift`；  
-	3. 方法注释风格统一采用Xcode默认风格，即使用`option + cmd + /`快键键编写注释；  
-	4. 其余要求同`编码规范`。
 
 	
 ## Tree
@@ -148,7 +104,4 @@ end
 		|____UIBarButtonItem+Extension.h
 		|____UIBarButtonItem+Extension.m
 
-## Remarks
-
-1. [Tools-issues](http://192.168.1.253:3000/iOS/Tools/issues/new)
 
