@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "JLTools_Swift"
   s.summary      = "JLTools in Swift"
-  s.version      = "1.1.3"
+  s.version      = "0.0.1"
   s.homepage     = "https://github.com/ALCoding/JLTools"
   s.license      = "MIT"
   s.authors      = { 'Jalen' => 'alvdev@126.com'}
